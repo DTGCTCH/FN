@@ -1,0 +1,221 @@
+@import url('https://webfontworld.github.io/DdangFonts/TangsBudaeJjigae.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+*{margin: 0px; padding: 0px;}
+img{display: block;}
+
+h2{font-weight: 500; font-size: 3.5vw; text-align: center; margin-top: 1vw; margin-bottom: 1vw;}
+h3{font-weight: 500; font-size: 2vw; text-align: center; margin-top: 1vw; margin-bottom: 1vw;}
+h4{font-weight: 500; font-size: 2.5vw; text-align: center; margin-bottom: 1vw;}
+p{font-weight: 500; font-size: 1.3vw; line-height: 140%; margin-bottom: 2vw;}
+section{padding-top: 8vw; padding-bottom: 8vw;}
+
+.ttext{font-family: 'TangsBudaeJjigae' !important;}
+.ctext{font-family: 'pretendard' !important;}
+.thighlight{display: inline; padding-left: 1.5vw; padding-right: 1.5vw; padding-top: 0.4vw;}
+.chighlight{display: inline; padding-top:0.3vw; padding-right: 1vw; padding-bottom:0.3vw; padding-left: 1vw;}
+.center{text-align: center;}
+.left{text-align: left;}
+
+.relative{position: relative;}
+.wrapper{width: 70vw; margin: auto;}
+.flex{display: flex;}
+
+.yellow{color: #fdf2d4;}
+.bg-yellow{background-color: #fdf2d4;}
+.navy{color: #25212f;}
+.bg-navy{background-color: #25212f;}
+.orange{color: #ffa364;}
+.bg-orange{background-color: #ffa364;}
+.red{color: #b95249;}
+.bg-red{background-color: #b95249;}
+.white{color: white;}
+.bg-white{background-color: white;}
+
+.spin{transition: transform 2s ease;}
+.spin:hover{animation: spin 2s infinite linear;}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*타이틀*/
+.timg{width:100%; opacity: 60%;}
+.ttextimg{width: 50%; position: absolute; top: 19vw; left: 25%;}
+#myImage {animation: zoom 5s infinite; transition-timing-function: ease-in-out;}
+    @keyframes zoom {
+        0% {transform: scale(0.9);}
+        50% {transform: scale(1.1);}
+        100% {transform: scale(0.9);}
+    }
+
+/*심각성*/
+.danger{margin-bottom: 6vw;}
+.dangerimg {width: 100%; object-fit: cover; margin:auto;}
+.text-box {background-image: url('../img/oceantrash.png'); background-size: cover; color: #fdf2d4; height: 50vw; overflow-y: scroll;}
+    .text-box::-webkit-scrollbar {display: none;}
+    .text-box h4{font-weight: 500; font-size: 4vw; text-align: center; margin-top: 20vw; margin-bottom: 0.6vw;}
+    .text-box p{font-size: 2vw; text-align: center; margin-bottom: 22vw;}
+
+
+/*프레셔스*/
+.precious{margin-bottom: 15vw;}
+.precious .what .flex{justify-content: center; gap: 4vw; padding-top: 1vw;}
+.precious .what p{padding-top: 2vw;}
+
+/*프로세스*/
+.process .flex{justify-content: space-evenly;}
+.process{padding-top: 1.5vw;}
+.p-t{font-size: 2vw; font-weight: 700; text-indent: 2vw;}
+.p-c{margin-left: 2vw;}
+
+/*기계*/
+.slides {
+    padding: 0;
+    width: 70vw;
+    height: 30vw;
+    display: block;
+    position: relative;
+    background-color: white;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2vw;
+    top: 0;
+    opacity: 0;
+    width:70vw;
+    height: 30vw;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+
+}
+
+.slide img {
+    width: 24vw;
+    height: 23vw;
+}
+
+.nav label {
+    width: 5vw;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0.5;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 27vw;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+.nav label:hover { opacity: 1; }
+.nav .next { right: 0; }
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 0.7vw;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 1.5vw;
+  height: vw;
+  margin: 0 0.4vw;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.mbotton{width: 35vw; display: inline-block; text-align: center; padding: 0; padding-top: 1.5vw; margin-top:2vw;}
+
+/*정보*/
+.info .flex{justify-content: space-evenly;}
+.iconbox{margin-top: 4vw; margin-bottom: 6vw;}
+
+/*제품*/
+.productp{margin-bottom: 6vw;}
+.product.flex{justify-content: space-evenly; flex-wrap: wrap; gap:2vw;}
+.productimg{width: 22vw;}
+.overlay{position: absolute; background: black; opacity: 0; width:20vw; height: 20vw; padding: 1vw;}
+.overlay:hover{opacity: 0.8; transition: 0.5s;}
+.content-onwer{font-size: 2vw; color:white; margin-top: 3vw; margin-bottom: 1vw;}
+.content-content{font-size: 1vw; color:white; line-height: 170%; text-align:justify;}
+
+/*가이드*/
+.guidep{margin-bottom: 6vw;}
+.guideimg{padding: 0.5vw; background: white;}
+.guide.flex{flex-wrap: wrap; justify-content: space-evenly; align-items: center;}
+.asdf{margin-bottom: 3vw;}
+.num{font-size: 2vw; margin-bottom:0.5vw;}
+
+/*지도*/
+.mapp{margin-bottom: 6vw;}
+
+/*참새클럽모집*/
+.clubp{margin-bottom: 6vw;}
+.personal-info.wrapper{width: 35vw; margin: auto;}
+.info-box{padding-top:3vw; padding-bottom: 5.5vw;}
+.info-box2{margin-bottom: 4vw; margin-top: 4vw; margin-left:6vw;}
+input{width: 20vw; height: 4vw; padding: 0.5vw; padding-left: 2vw; border-color: #25212f; font-size: 1.7vw;}
+input::placeholder{font-family: 'pretendard' !important; font-size: 1.7vw; vertical-align: middle;}
+button{width: 23vw; height: 6vw; padding: 0.5vw; padding-left:2vw; padding-top: 0.7vw; border-width: 0; margin:auto; margin-top:5vw; opacity:0.8;}
+.buttonp{font-size: 2vw; padding-top: 1vw;}
+button:hover{opacity:1; transition: 0.5s;}
+
+/*푸터*/
+footer{padding-top:3vw; padding-bottom:10vw;}
+.footer p{font-size: 1vw; line-height: 1vw;}
+.footer h4{font-size: 2vw;}
+.footer .flex{justify-content: space-between;}
